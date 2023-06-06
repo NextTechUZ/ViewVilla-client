@@ -1,8 +1,13 @@
 import React from 'react'
+import Showcase from '../../components/sections/Showcase'
+import AboutSection from '../../components/sections/About'
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div  >
+      <Showcase/>
+      <AboutSection/>
+    </div>
   )
 }
 

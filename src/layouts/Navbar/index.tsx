@@ -1,8 +1,10 @@
+
+import styles from "./nav.module.scss"
 import React from 'react'
 
 function Navbar() {
   return (
-    <div>Navbar</div>
+    <div className={styles.navbar}>Navbar</div>
   )
 }
 

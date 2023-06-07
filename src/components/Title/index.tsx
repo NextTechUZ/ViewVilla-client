@@ -4,11 +4,11 @@ import styles from "./title.module.scss";
 
 function Title({
   children,
-  mode = "dark",
-  type = "small",
-}: { mode?: "light" | "dark"; type?: "large" | "small" } & MainPropTypes) {
+  type = "dark",
+  size = "small",
+}: { type?: "light" | "dark"; size?: "large" | "small" } & MainPropTypes) {
   return (
-    <h1 className={`bruno  ${styles[mode]} ${styles[type]} ${styles.title}`}>{children}</h1>
+    <h1 className={`bruno  ${styles[type]} ${styles[size]} ${styles.title}`}>{children}</h1>
   );
 }
 

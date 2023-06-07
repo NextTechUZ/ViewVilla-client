@@ -1,29 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lexend:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lexend:wght@300;400;500;700;900&display=swap");
 
-
-*{
-    padding: 0;margin: 0;box-sizing: border-box;
-    font-family: inherit;
-    color: inherit;
-    outline: 1px solid rgba(255, 0, 0, 0.162);
-
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  color: inherit;
+//   outline: 1px solid rgba(255, 0, 0, 0.162);
 }
 
-:root{
-    --color-title-font: #1B1C57;
-    --color-p-font: #626687;
-    --color-background-light: #003ADF;
-    --color-background-dark: #002384;
-    --color-room-font: #1D4ED8;
-    --color-room-background: #DBEAFE;
-    --color-logo: #0071B0;
+:root {
+  --color-title-font: #1b1c57;
+  --color-p-font: #626687;
+  --color-background-light: #003adf;
+  --color-background-dark: #002384;
+  --color-room-font: #1d4ed8;
+  --color-room-background: #dbeafe;
+  --color-logo: #0071b0;
 }
-body{
-    font-family: 'Lexend', sans-serif;
+body {
+  font-family: "Lexend", sans-serif;
 }
 
-.bruno{
-    font-family: 'Bruno Ace SC', cursive;
+.bruno {
+  font-family: "Bruno Ace SC", cursive;
 }
-.lexend{
-    font-family: 'Lexend', sans-serif;}
+.lexend {
+  font-family: "Lexend", sans-serif;
+}
+.padding-inline {
+  padding-inline: 200px;
+}
+
+.sectionContainer {
+  max-width: 1600px;
+  margin-inline: auto;
+}
+
+.underline-animation {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    max-width: 130px;
+    transform: scaleX(0);
+    border-radius: 5px;
+    height: 0.05em;
+    bottom: -6px;
+    left: 0;
+    background: currentcolor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover::after {
+    background: currentcolor;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

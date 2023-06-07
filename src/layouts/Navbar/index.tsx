@@ -1,14 +1,41 @@
 import Link from "next/link";
 import styles from "./nav.module.scss";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "/public/media/Group 61.png";
 import Image from "next/image";
 import { menu } from "./navlinks";
 
 function Navbar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const [scrollPosition, setScrollPosition] = useState<number>(0);
+	const ref = useRef<HTMLHeadElement>(null);
+
+  const changeColor = () => {
+		if (!ref.current) return;
+		if (window.pageYOffset === 0) {
+ 			ref.current.style.background = "transparent";
+		} else {
+ 			ref.current.style.background = "rgba(255, 255, 255)";
+		}
+	};
+
+  useEffect(() => {
+		const handleScroll = () => {
+			changeColor();
+			if (!ref.current) return;
+
+			const currentScrollPos = window.pageYOffset;
+			ref.current.style.translate =
+				scrollPosition < currentScrollPos && currentScrollPos > 100
+					? "0 -100%"
+					: "0";
+			setScrollPosition(currentScrollPos);
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [scrollPosition]);
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} ref={ref}>
       <div className={`${styles.container} sectionContainer`}>
         <Link href="/">
           <a>

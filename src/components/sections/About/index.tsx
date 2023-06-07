@@ -12,7 +12,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 
 function AboutSection() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} padding-block`}>
       <div className={`${styles.about} sectionContainer  `}>
         <div className={styles.images}>
           <img {...mainImage} className={styles.mainImage} alt="mainImage" />
@@ -42,7 +42,7 @@ src={image3.src}
             qulay va barcha sharoitlarga ega
           </p>
           <h3>Villa ma’lumotlari</h3>
-          <div className="datas">
+          <div className={styles.datas}>
             {datas.map((data, i) => (
               <div key={i}>
                 {data.icon} <p>{data.label}</p>

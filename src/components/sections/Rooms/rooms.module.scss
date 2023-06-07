@@ -1,0 +1,59 @@
+.rooms {
+  padding: 7%;
+  padding-right: 0;
+  overflow: hidden;
+  @media (max-width: 400px) {
+    padding-right: 7%;
+
+  }
+   
+}
+.slider {
+  padding: 40px 0 150px;
+}
+
+.imageCard {
+  position: relative;
+  height: 600px;
+  @media (max-width: 1150px) {
+    height: 400px;
+  }
+
+  img {
+    height: 100%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 30px;
+    @media (max-width: 400px) {
+      margin: 0 auto;
+    }
+  }
+  p {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    background-color: var(--color-room-background);
+    color: var(--color-room-font);
+    padding: 5px 15px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: #0e1735;
+    padding-top: 24px;
+  }
+  @media (max-width: 400px) {
+    padding: 0 5%;
+    img {
+      width: 100%;
+    }
+    p {
+      left: 10%;
+    }
+  }
+}

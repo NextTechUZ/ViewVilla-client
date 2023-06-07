@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lexend:wght@300;400;500;700;900&display=swap");
-
+@import  './_slider.scss';
 * {
   padding: 0;
   margin: 0;
@@ -59,4 +59,10 @@ body {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+}
+
+.padding-block{
+    @media (max-width: 1000px) {
+        padding-block: 100px   !important ;
+      }
 }

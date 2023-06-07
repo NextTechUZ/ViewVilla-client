@@ -1,0 +1,52 @@
+.container {
+  background: linear-gradient(
+    113.96deg,
+    var(--color-background-light) 3.46%,
+    var(--color-background-dark) 96.64%
+  );
+  padding: 7%;
+}
+
+.about {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10vw;
+  .images {
+    position: relative;
+
+    width: 50%;
+    & > div {
+      position: absolute;
+      width: 60%;
+      background-color: green;
+    }
+  }
+  .mainImage {
+    width: 100%;
+    height: auto;
+  }
+  .image {
+    position: absolute;
+  }
+  .image1{
+    right: -7%;
+    top: -10%;
+     width: 40%;
+    }
+    .image2{
+        bottom: -7%;
+        right: 30%;
+       width: 20%;
+      }
+      .image3{
+          bottom: 20%;
+          left: -5%;
+         width: 20%;
+        }
+
+  .text {
+    width: 50%;
+  }
+}

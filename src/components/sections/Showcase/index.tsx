@@ -28,6 +28,8 @@ import image from "/public/media/image 6.png";
 
 
  import React, { useRef,   } from "react"; 
+import Button from "../../Button";
+import { BsFillTelephoneFill } from "react-icons/bs";
  
 function Showcase() {
    
@@ -48,6 +50,8 @@ function Showcase() {
         </Title>
         <p>Everything you need about finding your place to live will be here,
             where it will be easier for you</p>{" "}
+            <Button  ><BsFillTelephoneFill /> Contact Now</Button>
+
       </div>
       <div className={styles.images}>
         <div className={styles.ovals}>

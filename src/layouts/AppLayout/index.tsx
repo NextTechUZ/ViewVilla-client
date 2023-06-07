@@ -7,7 +7,7 @@ import Footer from '../Footer'
 
 function AppLayout({children}:MainPropTypes ) {
   return (
-    <div>
+    <div  >
         <Navbar/>
         {children}
         <Footer/>

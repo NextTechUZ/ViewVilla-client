@@ -6,6 +6,10 @@
   position: relative;
   z-index: -1;
   overflow: hidden;
+  @media (min-width:1600px) {
+    padding: 150px 0;  
+
+  }
   .text {
     width: 50vw;
     max-width: 600px;

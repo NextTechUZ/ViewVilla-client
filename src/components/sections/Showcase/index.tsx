@@ -30,16 +30,14 @@ import image from "/public/media/image 6.png";
  import React, { useRef,   } from "react"; 
  
 function Showcase() {
-  const ref = useRef(null);
-  
+   
  
   return (
     <div
       className={` ${
         styles.showcase
-      }`}
-      ref={ref}
-    >
+      } sectionContainer`}
+     >
       {/* {products.map((item) => {
 				item.titleRu;
 			})} */}

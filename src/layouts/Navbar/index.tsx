@@ -6,55 +6,56 @@ import Image from "next/image";
 import { menu } from "./navlinks";
 
 function Navbar() {
-	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [scrollPosition, setScrollPosition] = useState<number>(0);
-	const ref = useRef<HTMLHeadElement>(null);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
+  const ref = useRef<HTMLHeadElement>(null);
 
   const changeColor = () => {
-		if (!ref.current) return;
-		if (window.pageYOffset === 0) {
- 			ref.current.style.background = "transparent";
-		} else {
- 			ref.current.style.background = "rgba(255, 255, 255)";
-		}
-	};
+    if (!ref.current) return;
+    if (window.pageYOffset === 0) {
+      ref.current.style.background = "transparent";
+    } else {
+      ref.current.style.background = "rgba(255, 255, 255)";
+    }
+  };
 
   useEffect(() => {
-		const handleScroll = () => {
-			changeColor();
-			if (!ref.current) return;
+    const handleScroll = () => {
+      changeColor();
+      if (!ref.current) return;
 
-			const currentScrollPos = window.pageYOffset;
-			ref.current.style.translate =
-				scrollPosition < currentScrollPos && currentScrollPos > 100
-					? "0 -100%"
-					: "0";
-			setScrollPosition(currentScrollPos);
-		};
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, [scrollPosition]);
+      const currentScrollPos = window.pageYOffset;
+      ref.current.style.translate =
+        scrollPosition < currentScrollPos && currentScrollPos > 100
+          ? "0 -100%"
+          : "0";
+      setScrollPosition(currentScrollPos);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [scrollPosition]);
   return (
     <nav className={styles.navbar} ref={ref}>
       <div className={`${styles.container} sectionContainer`}>
         <Link href="/">
           <a>
-            <Image {...logo} className={styles.logo} alt="logo"  />
+            <Image {...logo} className={styles.logo} alt="logo" />
           </a>
         </Link>
-        <div 					className={` ${isOpen && styles.open} ${styles.links}`}
-					onClick={() => setIsOpen((pre) => !pre)}
->
-          {
-            menu.map(link =>    <Link href={link.link} key={link.id}>
-            <a className="underline-animation">{link.label}</a>
-          </Link>)
-          }
-       
-          
+        <div
+          className={` ${isOpen && styles.open} ${styles.links}`}
+          onClick={() => setIsOpen((pre) => !pre)}
+        >
+          {menu.map((link) => (
+            <Link href={link.link} key={link.id}>
+              <a className="underline-animation">{link.label}</a>
+            </Link>
+          ))}
         </div>
-        <div className={`${styles.menuBtn} ${isOpen && styles.x}`} 					onClick={() => setIsOpen((pre) => !pre)}
-></div>
+        <div
+          className={`${styles.menuBtn} ${isOpen && styles.x}`}
+          onClick={() => setIsOpen((pre) => !pre)}
+        ></div>
       </div>
     </nav>
   );

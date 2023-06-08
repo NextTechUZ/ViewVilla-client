@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lexend:wght@300;400;500;700;900&display=swap");
 @import  './_slider.scss';
+@import  './_font.scss';
 * {
   padding: 0;
   margin: 0;
@@ -23,9 +24,7 @@ body {
   font-family: "Lexend", sans-serif;
 }
 
-.bruno {
-  font-family: "Bruno Ace SC", cursive;
-}
+ 
 .lexend {
   font-family: "Lexend", sans-serif;
 }

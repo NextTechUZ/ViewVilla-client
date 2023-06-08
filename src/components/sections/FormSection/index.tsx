@@ -10,7 +10,7 @@ function FormSection() {
   
   return (
     <div
-      className={`  ${styles.contact}`}
+      className={`${styles.contact} padding-block`}
       id="contact"
       >
       <form

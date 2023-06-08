@@ -1,61 +1,34 @@
-import React from "react";
-import styles from "./about.module.scss";
-import Title from "../../Title";
-import mainImage from "/public/media/Rectangle 17.png";
-import image1 from "/public/media/Rectangle 18.png";
-import image2 from "/public/media/Rectangle 19.png";
-import image3 from "/public/media/Rectangle 20.png";
-import Image from "next/image";
-import { datas } from "./data";
 import Button from "../../Button";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import Title from "../../Title";
+import styles from "./about.module.scss";
+import React from "react";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import image from "/public/media/image 6.png";
 
-function AboutSection() {
+function About() {
   return (
-    <div className={`${styles.container} padding-block`}>
-      <div className={`${styles.about} sectionContainer  `}>
-        <div className={styles.images}>
-          <img {...mainImage} className={styles.mainImage} alt="mainImage" />
-          <img
-src={image1.src}            className={`${styles.image1} ${styles.image}`}
-            alt="image1"
-          />
-
-          <img
-src={image2.src} 
-            className={`${styles.image2} ${styles.image}`}
-            alt="image2"
-          />
-          <img
-src={image3.src} 
-            className={`${styles.image3} ${styles.image}`}
-            alt="image3"
-          />
-        </div>
-
-        <div className={styles.text}>
-          <Title type="light">
-            Sayohat qiling va <span>Villamizni</span> ko’ring
-          </Title>
-          <p>
-            Villamiz Jahon boyicha barcha standartlarga javob beradi. Zamonaviy
-            qulay va barcha sharoitlarga ega
-          </p>
-          <h3>Villa ma’lumotlari</h3>
-          <div className={styles.datas}>
-            {datas.map((data, i) => (
-              <div key={i}>
-                {data.icon} <p>{data.label}</p>
-              </div>
-            ))}
-          </div>
-          <Button type="light" style={{ borderRadius: 100 }}>
-            <BsFillTelephoneFill /> Contact Now
-          </Button>
-        </div>
+    <div className={`${styles.about}   `}>
+      <div className={styles.text}>
+        <Title type="light" size="large">
+          Biz Haqimizda
+        </Title>
+        <p>
+          Fusce justo mi, vehicula id arcu et, dapibus tristique lectus. Vivamus
+          a elit sodales, tincidunt nunc non, maximus lacus. Fusce a augue sed
+          dolor auctor iaculis vitae id mauris. Integer ut lectus non neque
+          suscipit luctus. Mauris et erat id ipsum condimentum cursus. Sed
+          tempus enim non massa mattis iaculis. In quis massa risus
+        </p>
+        <Button type="light">
+          Learn More
+          <AiOutlineArrowRight />
+        </Button>
+      </div>
+      <div className={styles.image}>
+        <img src={image.src} alt="" />
       </div>
     </div>
   );
 }
 
-export default AboutSection;
+export default About;

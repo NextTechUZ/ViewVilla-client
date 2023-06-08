@@ -1,0 +1,97 @@
+.container {
+  background: linear-gradient(
+    113.96deg,
+    var(--color-background-light) 3.46%,
+    var(--color-background-dark) 96.64%
+  );
+  padding: 7%;
+}
+
+.about {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10vw;
+  @media (min-width: 1900px) {
+    gap: 180px;
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 100px;
+    .text {
+      width: 100% !important;
+    }
+    .images {
+      margin: 0 auto;
+      width: 80% !important;
+    }
+  }
+
+  .images {
+    position: relative;
+
+    width: 50%;
+    & > div {
+      position: absolute;
+      width: 60%;
+      background-color: green;
+    }
+  }
+  .mainImage {
+    width: 100%;
+    height: auto;
+  }
+  .image {
+    position: absolute;
+  }
+  .image1 {
+    right: -7%;
+    top: -10%;
+    width: 40%;
+  }
+  .image2 {
+    bottom: -7%;
+    right: 30%;
+    width: 20%;
+  }
+  .image3 {
+    bottom: 20%;
+    left: -5%;
+    width: 20%;
+  }
+
+  .text {
+    width: 50%;
+    h1 {
+      max-width: 400px;
+    }
+    p,
+    h3 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 190%;
+      max-width: 500px;
+    }
+
+    & > p {
+      margin: 16px 0;
+    }
+    h3 {
+      font-weight: 600;
+    }
+    .datas {
+      margin: 16px 0 22px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .datas div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+}

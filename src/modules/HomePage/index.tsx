@@ -1,15 +1,17 @@
 import React from 'react'
 import Showcase from '../../components/sections/Showcase'
-import AboutSection from '../../components/sections/About'
-import Rooms from '../../components/sections/Rooms'
+ import Rooms from '../../components/sections/Rooms'
 import FormSection from '../../components/sections/FormSection'
+import Statistics from '../../components/sections/Statistics'
+import About from '../../components/sections/About'
 
 function HomePage() {
   return (
     <div  >
       <Showcase/>
-      <AboutSection/>
+      <Statistics/>
       <Rooms/>
+      <About/>
       <FormSection/>
     </div>
   )

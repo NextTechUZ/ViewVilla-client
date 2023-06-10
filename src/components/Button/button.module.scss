@@ -21,11 +21,6 @@
   &.light {
     color: var(--color-room-font);
     background: #ffffff;
-
-    &:hover {
-      background: transparent;
-      color: white;
-      border-color: white;
-    }
+ 
   }
 }

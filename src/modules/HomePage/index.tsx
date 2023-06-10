@@ -4,6 +4,7 @@ import Showcase from '../../components/sections/Showcase'
 import FormSection from '../../components/sections/FormSection'
 import Statistics from '../../components/sections/Statistics'
 import About from '../../components/sections/About'
+import Gallary from '../../components/sections/Gallary'
 
 function HomePage() {
   return (
@@ -12,6 +13,7 @@ function HomePage() {
       <Statistics/>
       <Rooms/>
       <About/>
+      <Gallary/>
       <FormSection/>
     </div>
   )

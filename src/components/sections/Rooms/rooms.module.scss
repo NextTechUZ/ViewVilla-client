@@ -6,6 +6,10 @@
     padding-right: 7%;
 
   }
+   @media (min-width: 1840px) {
+    padding-left: calc(50vw - 1600px / 2);
+
+  }
    
 }
 .slider {

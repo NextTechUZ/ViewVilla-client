@@ -32,6 +32,10 @@
 		max-height: 500px;
 		max-width: 500px;
 		z-index: 1;
+		@media (min-width: 1840px) {
+			left: calc(50vw - 1600px / 2);
+		
+		  }
 	}
 
 	form {

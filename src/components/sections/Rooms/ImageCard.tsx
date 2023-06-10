@@ -6,8 +6,8 @@ import { GiPencilRuler } from "react-icons/gi";
 function ImageCard({
   imageSrc,
   name,
-  size
- }: {
+  size,onClick
+ }: {onClick:()=>void,
   imageSrc: string;
   name: string;
   size:string,
@@ -15,7 +15,7 @@ function ImageCard({
 }) {
   return (
     <div className={styles.imageCard}>
-      <img src={imageSrc} alt="" />{" "}
+      <img src={imageSrc} alt="" onClick={onClick}/>{" "}
       <p>
         <GiPencilRuler size={23}/>
       {size}

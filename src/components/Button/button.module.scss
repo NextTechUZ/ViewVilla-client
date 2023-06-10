@@ -16,11 +16,7 @@
   transition: 300ms;
  
 
-  &:hover {
-    background: transparent;
-    color: var(--color-background-dark);
-    border-color: var(--color-background-dark);
-  }
+ 
 
   &.light {
     color: var(--color-room-font);

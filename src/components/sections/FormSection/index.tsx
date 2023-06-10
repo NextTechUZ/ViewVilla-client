@@ -1,8 +1,10 @@
-import Link from "next/link";
-import styles from "./contact.module.scss";
+ import styles from "./contact.module.scss";
 import Button from "../../Button";
  import { useRef, useState } from "react";
 import Title from "../../Title";
+import axios from "axios";
+import {  toast } from "react-toastify";
+import { API_URL } from "../../../shared/constants";
  
 function FormSection() {
    const formRef = useRef<HTMLFormElement>(null);
@@ -13,50 +15,53 @@ function FormSection() {
       className={`${styles.contact} padding-block`}
       id="contact"
       >
+ 
       <form
         action="/"
         ref={formRef}
-        // onSubmit={(e) => {
-        //   e.preventDefault();
-        //   const formdata = new FormData(e.currentTarget);
-        //   const data = Object.fromEntries(formdata.entries());
-        //   setDisable(true);
+        onSubmit={(e) => {
+          e.preventDefault();
+          const formdata = new FormData(e.currentTarget);
+          const data = Object.fromEntries(formdata.entries());
+          setDisable(true);
 
-        //   axios
-        //     .post(`${API_URL}/api/order`, data, {
-        //       headers: {
-        //         "Content-Type": "application/json",
-        //       },
-        //     })
-        //     .finally(() => setDisable(false))
-        //     .then((res) => {
-        //       formRef.current?.reset();
-        //       toast.success("Order sent", {
-        //         position: "top-right",
-        //         autoClose: 2000,
-        //         hideProgressBar: false,
-        //         closeOnClick: true,
-        //         pauseOnHover: true,
-        //         draggable: true,
-        //         progress: undefined,
-        //         theme: "light",
-        //       });
-        //     })
-        //     .catch((e) => {
-        //       toast.error("Cannot send your order", {
-        //         position: "top-right",
-        //         autoClose: 2000,
-        //         hideProgressBar: false,
-        //         closeOnClick: true,
-        //         pauseOnHover: true,
-        //         draggable: true,
-        //         progress: undefined,
-        //         theme: "light",
-        //       });
-        //     });
-        // }}
+          axios
+            .post(API_URL, data, {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            })
+            .finally(() => setDisable(false))
+            .then((res) => {
+              formRef.current?.reset();
+              toast.success("Order sent", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+              });
+            })
+            .catch((e) => {
+              console.log(e);
+              
+              toast.error("Cannot send your order", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+              });
+            });
+        }}
       >
-       <Title>
+       <Title type="light">
         Hoziroq buyurtma bering!
        </Title>
         <div className={styles.line}></div>

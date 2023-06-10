@@ -38,7 +38,7 @@ function Showcase() {
     <div
       className={` ${
         styles.showcase
-      } sectionContainer`}
+      } sectionContainer`} id="home"
      >
       {/* {products.map((item) => {
 				item.titleRu;

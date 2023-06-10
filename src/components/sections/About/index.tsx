@@ -4,11 +4,14 @@ import styles from "./about.module.scss";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import image from "/public/media/image 6.png";
+import useImage from "../../../utils/useImage";
 
 function About() {
+  const {imageEl,onClick} = useImage()
+
   return (
-    <div className={`${styles.about}   `}>
-      <div className={styles.text}>
+    <div className={`${styles.about}   `} id="about">
+       <div className={styles.text}>
         <Title type="light" size="large">
           Biz Haqimizda
         </Title>
@@ -25,8 +28,10 @@ function About() {
         </Button>
       </div>
       <div className={styles.image}>
-        <img src={image.src} alt="" />
+        <img src={image.src} alt="" onClick={()=>onClick(image.src)}/>
       </div>
+      {imageEl}
+
     </div>
   );
 }

@@ -5,7 +5,7 @@ import RoomsSlider from './RoomsSlider'
 
 function Rooms() {
   return (
-    <div className={`${styles.rooms} room-slider padding-block`}>
+    <div className={`${styles.rooms} room-slider padding-block`} id='rooms'>
         <Title>Qulay xonalar</Title> 
         
         <RoomsSlider/>

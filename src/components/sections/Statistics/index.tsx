@@ -12,7 +12,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 
 function Statistics() {
   return (
-    <div className={`${styles.container} padding-block`}>
+    <div className={`${styles.container} padding-block`} id="statistics">
       <div className={`${styles.about} sectionContainer  `}>
         <div className={styles.images}>
           <img {...mainImage} className={styles.mainImage} alt="mainImage" />

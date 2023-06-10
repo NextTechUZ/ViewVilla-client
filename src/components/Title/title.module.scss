@@ -1,25 +1,32 @@
-.title{
-color: var(--color-title-font);
-text-transform: capitalize;
-font-size: 32px;
-    span{
-        color: transparent;
-         -webkit-text-stroke-color: var(--color-title-font);
-        -webkit-text-stroke-width: 1px; 
+.title {
+  color: var(--color-title-font);
+  text-transform: capitalize;
+  font-size: 32px;
+  span {
+    color: transparent;
+    -webkit-text-stroke-color: var(--color-title-font);
+    -webkit-text-stroke-width: 1px;
+  }
+  &.light {
+    color: white;
+    span {
+      -webkit-text-stroke-color: white;
     }
-    &.light{
-        color: white;
-         span{
-              -webkit-text-stroke-color: white;
-         }
-
-    }  &.large{
-font-size: 44px;
-@media (max-width:600px) {
-    font-size: 36px;
-}
-@media (max-width:400px) {
+  }
+  @media (max-width: 600px) {
     font-size: 26px;
-}
+  }
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
+
+  &.large {
+    font-size: 44px;
+    @media (max-width: 600px) {
+      font-size: 36px;
     }
+    @media (max-width: 400px) {
+      font-size: 26px;
+    }
+  }
 }

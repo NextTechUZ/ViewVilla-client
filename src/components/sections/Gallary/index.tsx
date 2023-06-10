@@ -17,7 +17,7 @@ function Gallary() {
         </Title>
         <div className={styles.imageContainer}>
           {images.slice(0, active ? images.length : 1).map((images, i) => (
-            <div className={styles.images}>
+            <div className={styles.images} key={i}>
               {images.slice(0, active ? images.length : 3).map((image, i) => (
                 <div key={i} className={styles.image} onClick={() => onClick(image.imageSrc)}>
                   <img src={image.imageSrc} alt="image" />

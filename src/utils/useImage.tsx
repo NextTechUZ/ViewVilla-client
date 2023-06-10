@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 
-function useImage( className?: string) {
+function useImage(className?: string) {
   const [active, setActive] = useState(false);
   const [imageSrc, setImageSrc] = useState("");
   const imageEl = (
@@ -10,21 +10,24 @@ function useImage( className?: string) {
       className={`${className} ${styles.image}`}
       alt=""
       onClick={() => setActive(false)}
-      style={{transform:`scale(${active ? 1 : 0})`,opacity:active ? 1 : 0}}
+      style={{ transform: `scale(${active ? 1 : 0})`, opacity: active ? 1 : 0 }}
     />
   );
-  useEffect(()=>{
-if (!active) return
+  useEffect(() => {
+    if (!active) {
+      document.body.style.overflow = "auto";
+      return;
+    }
 
+    document.body.style.overflow = "hidden";
+  }, [active]);
 
-  },[active])
+  const onClick = (newSrc: string) => {
+    setImageSrc(newSrc);
+    setActive(true);
+  };
 
-  const onClick = (newSrc:string)=>{
-    setImageSrc(newSrc)
-    setActive(true)
-  }
-
-  return {imageEl,onClick};
+  return { imageEl, onClick };
 }
 
 export default useImage;

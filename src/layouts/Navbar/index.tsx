@@ -19,32 +19,33 @@ function Navbar() {
     }
   };
 
-  useEffect(() => {
-    
-    if (!isOpen) {
-      document.body.style.overflow = "auto";
-      return;
-    }
-    
-    document.body.style.overflow = "hidden";
-    if (ref.current) ref.current.style.translate = "0";
-  }, [isOpen]);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       changeColor();
       if (!ref.current) return;
-
+      
       const currentScrollPos = window.pageYOffset;
-      ref.current.style.translate =
-        scrollPosition < currentScrollPos && currentScrollPos > 100
-          ? "0 -100%"
-          : "0";
+      
+       ref.current.style.translate =
+      scrollPosition < currentScrollPos && currentScrollPos > 100  
+      ? "0 -100%"
+      : "0";
       setScrollPosition(currentScrollPos);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollPosition]);
+
+  // useEffect(() => {
+    
+  //   if (!isOpen) {
+  //     document.body.style.overflow = "auto";
+  //     return;
+  //   }
+    
+  //   document.body.style.overflow = "hidden";
+  //  }, [isOpen]);
 
   return (
     <nav className={styles.navbar} ref={ref}>

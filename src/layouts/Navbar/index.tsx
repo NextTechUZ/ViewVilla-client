@@ -18,7 +18,17 @@ function Navbar() {
       ref.current.style.background = "rgba(255, 255, 255)";
     }
   };
-  
+
+  useEffect(() => {
+    
+    if (!isOpen) {
+      document.body.style.overflow = "auto";
+      return;
+    }
+    
+    document.body.style.overflow = "hidden";
+    if (ref.current) ref.current.style.translate = "0";
+  }, [isOpen]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +45,7 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollPosition]);
+
   return (
     <nav className={styles.navbar} ref={ref}>
       <div className={`${styles.container} sectionContainer`}>
@@ -47,11 +58,13 @@ function Navbar() {
           className={` ${isOpen && styles.open} ${styles.links}`}
           onClick={() => setIsOpen((pre) => !pre)}
         >
-          {menu.map((link) => (
-            <Link href={link.link} key={link.id}>
-              <a className="underline-animation">{link.label}</a>
-            </Link>
-          ))}
+          <div>
+            {menu.map((link) => (
+              <Link href={link.link} key={link.id}>
+                <a className="underline-animation">{link.label}</a>
+              </Link>
+            ))}
+          </div>
         </div>
         <div
           className={`${styles.menuBtn} ${isOpen && styles.x}`}

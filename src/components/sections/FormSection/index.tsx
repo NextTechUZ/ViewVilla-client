@@ -34,7 +34,7 @@ function FormSection() {
             .finally(() => setDisable(false))
             .then((res) => {
               formRef.current?.reset();
-              toast.success("Order sent", {
+              toast.success("Buyurtma qabul qilindi", {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -48,7 +48,7 @@ function FormSection() {
             .catch((e) => {
               console.log(e);
               
-              toast.error("Cannot send your order", {
+              toast.error("Buyurtma jo'natilmadi", {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -77,7 +77,7 @@ function FormSection() {
           placeholder="Telefon"
           required
         />
-        <textarea name="message" placeholder="Xabar"></textarea>
+        <textarea name="message" placeholder="Bron qilish kunlaringiz:"></textarea>
         <div className={styles.line}></div>
         <Button
           style={{
@@ -91,7 +91,7 @@ function FormSection() {
           }}
           disabled={disable}
         >
-          Order 
+          Buyurtma berish 
         </Button>
       </form>
       <div className={styles.map}>

@@ -1,3 +1,4 @@
+import styles from "./layout.module.scss"
 import React, { useEffect, useState } from "react";
 import { MainPropTypes } from "../../shared/types";
 import Navbar from "../Navbar";
@@ -13,9 +14,13 @@ function AppLayout({ children }: MainPropTypes) {
   }, []);
 
   return isActive ? (
-    <video autoPlay muted playsInline style={{width:'100vw',height:"100vh",objectFit:"contain"}}>
+    <div className={styles.video}>
+
+    <video autoPlay muted playsInline  >
       <source src="/media/logo.mp4" type="video/mp4" />
     </video>
+   <h1 className="bruno">ViewVilla</h1>
+    </div>
   ) : (
     <div>
       <Navbar />

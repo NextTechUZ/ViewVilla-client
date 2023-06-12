@@ -61,8 +61,8 @@ function FormSection() {
             });
         }}
       >
-       <Title type="light">
-        Hoziroq buyurtma bering!
+       <Title>
+        Hoziroq <span>buyurtma</span> bering!
        </Title>
         <div className={styles.line}></div>
         <input

@@ -1,24 +1,32 @@
-.video{
+.video {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  video {
+    max-width: 600px;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
- gap: 30px;
-    video{
-        max-width: 600px;
- width: 100%;
-    }
+   }
 
-h1{
-
+  h1 {
     letter-spacing: 2px;
     font-size: 50px;
-    color: #0071B0;
-    @media (max-width:600px) {
-        font-size: 10vw;
-        line-height: 1vw;
-
+    color: #0071b0;
+    @media (max-width: 600px) {
+      font-size: 10vw;
+      line-height: 1vw;
     }
-}}
+  }
+}
+
+
+@keyframes container {
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0;
+    }
+}

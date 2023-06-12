@@ -36,7 +36,7 @@ function Statistics() {
 
         <div className={styles.text}>
           <Title type="light">
-            Sayohat qiling va <span>Villamizni</span> ko’ring
+            Sayohat qiling va <span>Villamizdan</span> Roxatlaning
           </Title>
           <p>
             Villamiz Jahon boyicha barcha standartlarga javob beradi. Zamonaviy

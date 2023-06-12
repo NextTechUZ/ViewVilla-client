@@ -6,7 +6,7 @@
   transition: 500ms;
   top: 0;
   left: 0;
- }
+}
 
 .container {
   display: flex;
@@ -68,7 +68,8 @@
   position: relative;
 
   &::after,
-  &::before {
+  &::before,
+  div {
     content: "";
     position: absolute;
     transition: 1s;
@@ -84,6 +85,12 @@
     width: 50%;
     right: 0;
     height: 1px;
+  }
+  div {
+    top: 50%;
+    width: 75%;
+    right: 0;
+    height: 1.5px;
   }
   &.x {
     &::after,
@@ -101,6 +108,10 @@
       top: 50%;
       translate: 0 -50%;
       rotate: 50deg;
+    }
+    div{
+      scale:  0 1;
+      transform-origin: right center;
     }
   }
 }

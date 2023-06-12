@@ -12,7 +12,7 @@ function RoomsSlider() {
     dots: false,
     infinite: true,
     speed: 700,
-    slidesToShow: 3.5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
     className: styles.slider,
@@ -25,17 +25,17 @@ function RoomsSlider() {
       {
         breakpoint: 1500,
         settings: {
-          slidesToShow: 2.5,
+          slidesToShow: 3,
         },
       },
       {
-        breakpoint: 800,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 2,
         },
       },
       {
-        breakpoint: 400,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
         },

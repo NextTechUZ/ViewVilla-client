@@ -18,6 +18,7 @@ function Navbar() {
       ref.current.style.background = "rgba(255, 255, 255)";
     }
   };
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +56,9 @@ function Navbar() {
         <div
           className={`${styles.menuBtn} ${isOpen && styles.x}`}
           onClick={() => setIsOpen((pre) => !pre)}
-        ></div>
+        >
+          <div></div>
+        </div>
       </div>
     </nav>
   );

@@ -11,8 +11,9 @@ function RoomsSlider() {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 700,
+    speed: 500,
     slidesToShow: 4,
+    
     slidesToScroll: 1,
     initialSlide: 0,
     className: styles.slider,
@@ -37,7 +38,8 @@ function RoomsSlider() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1,    speed: 200,
+
         },
       },
     ],

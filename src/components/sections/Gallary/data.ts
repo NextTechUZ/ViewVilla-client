@@ -1,6 +1,6 @@
 import image1 from "/public/media/qwqw1.jpeg";
 import image2 from "/public/media/qwqw12.png";
-import image3 from "/public/media/qwqw3.png";
+import image3 from "/public/media/qwqw7.jpeg";
 import image4 from "/public/media/qwqw4.jpeg";
 import image5 from "/public/media/qwqw5.png";
 import image6 from "/public/media/qwqw6.jpeg";

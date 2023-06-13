@@ -2,7 +2,8 @@ import Image from "next/image";
 import Title from "../../Title";
 import styles from "./showcase.module.scss";
 // import React from "react";
-import image from "/public/media/image 6.png";
+import image from "/public/media/qwqw.jpeg";
+import image1 from "/public/media/qwqw1.jpeg";
 // import Image from "next/image";
 
 // function Showcase() {
@@ -60,7 +61,7 @@ function Showcase() {
           </div>
           <div className={styles.line}></div>{" "}
           <div className={`${styles.image} ${styles.image2}`}>
-          <Image {...image} alt="" />
+          <Image {...image1} alt="" />
           </div>
         </div>
        </div>

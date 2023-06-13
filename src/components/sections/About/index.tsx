@@ -3,7 +3,7 @@ import Title from "../../Title";
 import styles from "./about.module.scss";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import image from "/public/media/image 6.png";
+import image from "/public/media/qwqw4.jpeg";
 import useImage from "../../../utils/useImage";
 
 function About() {

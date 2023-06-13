@@ -5,10 +5,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
+animation: container 1s linear 3s 1 forwards;
   video {
     max-width: 600px;
     width: 100%;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
    }
 
   h1 {
@@ -22,11 +23,13 @@
   }
 }
 
-
 @keyframes container {
-    from{
-        opacity: 1;
-    }to{
-        opacity: 0;
-    }
+  from {
+    scale: 1;
+    opacity: 1;
+  }
+  to {
+    scale: 10;
+    opacity: 0;
+  }
 }

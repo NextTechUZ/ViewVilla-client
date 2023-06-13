@@ -1,11 +1,10 @@
 import React from "react";
 import styles from "./about.module.scss";
 import Title from "../../Title";
-import mainImage from "/public/media/Rectangle 17.png";
-import image1 from "/public/media/Rectangle 18.png";
-import image2 from "/public/media/Rectangle 19.png";
-import image3 from "/public/media/Rectangle 20.png";
-import Image from "next/image";
+import   mainImage from "/public/media/1212qw.jpeg";
+import image1 from "/public/media/qwqw7.jpeg";
+import image2 from "/public/media/qwqw13.jpeg";
+import image3 from "/public/media/qwqw12.png";
 import { datas } from "./data";
 import Button from "../../Button";
 import { BsFillTelephoneFill } from "react-icons/bs";

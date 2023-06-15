@@ -5,12 +5,11 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-animation: container 1s linear 3s 1 forwards;
+  animation: container 1s linear 3s 1 forwards;
   video {
     max-width: 600px;
-    width: 100%;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-   }
+    width: 100%; 
+  }
 
   h1 {
     letter-spacing: 2px;

@@ -1,21 +1,17 @@
- import styles from "./contact.module.scss";
+import styles from "./contact.module.scss";
 import Button from "../../Button";
- import { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Title from "../../Title";
 import axios from "axios";
-import {  toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { API_URL } from "../../../shared/constants";
- 
+
 function FormSection() {
-   const formRef = useRef<HTMLFormElement>(null);
-   const [disable, setDisable] = useState<boolean>(false);
-  
+  const formRef = useRef<HTMLFormElement>(null);
+  const [disable, setDisable] = useState<boolean>(false);
+
   return (
-    <div
-      className={`${styles.contact} padding-block`}
-      id="contact"
-      >
- 
+    <div className={`${styles.contact} padding-block`} id="contact">
       <form
         action="/"
         ref={formRef}
@@ -47,7 +43,7 @@ function FormSection() {
             })
             .catch((e) => {
               console.log(e);
-              
+
               toast.error("Buyurtma jo'natilmadi", {
                 position: "top-right",
                 autoClose: 2000,
@@ -61,23 +57,16 @@ function FormSection() {
             });
         }}
       >
-       <Title>
-        Hoziroq <span>buyurtma</span> bering!
-       </Title>
+        <Title>
+          Hoziroq <span>buyurtma</span> bering!
+        </Title>
         <div className={styles.line}></div>
-        <input
-          type="text"
-          name="fullName"
-          placeholder="Ismingiz"
-          required
-        />
-        <input
-          type="text"
-          name="phoneNumber"
-          placeholder="Telefon"
-          required
-        />
-        <textarea name="message" placeholder="Bron qilish kunlaringiz:"></textarea>
+        <input type="text" name="fullName" placeholder="Ismingiz" required />
+        <input type="text" name="phoneNumber" placeholder="Telefon" required />
+        <textarea
+          name="message"
+          placeholder="Bron qilish kunlaringiz:"
+        ></textarea>
         <div className={styles.line}></div>
         <Button
           style={{
@@ -91,22 +80,13 @@ function FormSection() {
           }}
           disabled={disable}
         >
-          Buyurtma berish 
+          Buyurtma berish
         </Button>
       </form>
       <div className={styles.map}>
         {/* <div style="position:relative;overflow:hidden;"> */}
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d76131.33383679594!2d69.15085919299115!3d41.29834376347496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef5fc9896b4e7%3A0xbf82f52456417ac6!2zVEhFRE9PUlMgLSDQsNCy0YLQvtC80LDRgtC40YfQtdGB0LrQuNC1INCy0L7RgNC-0YLQsA!5e0!3m2!1sen!2sus!4v1683787806866!5m2!1sen!2sus"></iframe>{" "}
-        {/* <div>
-          <p>20, Awesome Road, New York, Usa 4D BS3</p>
-
-          <Link href="/">
-            <a>+123 456 7890</a>
-          </Link>
-          <Link href="/">
-            <a>hello@ulina.com</a>
-          </Link>
-        </div> */}
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11917.659681321746!2d70.04366752420663!3d41.68997773710499!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38af6b81ce257389%3A0xf0e1bf81977fdd5!2sView%20Villa%20%7C%20DACHA%20SIJJAK!5e0!3m2!1sen!2s!4v1686824441759!5m2!1sen!2s"></iframe>{" "}
+      
       </div>
     </div>
   );

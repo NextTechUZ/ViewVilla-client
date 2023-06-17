@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
-import VanillaTilt from "vanilla-tilt";
+import VanillaTilt, { TiltOptions } from "vanilla-tilt";
 import { MainPropTypes } from "../../shared/types";
 
  
-function Tilt(props:{options:any,onClick?:any} & MainPropTypes ) {
+function Tilt(props:{options?:TiltOptions,onClick?:any} & MainPropTypes ) {
     const { options,children, ...rest } = props;
     const tilt = useRef(null);
   

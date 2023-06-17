@@ -26,8 +26,7 @@ function Gallary() {
             <div className={styles.images} key={i}>
               {images.slice(0, active ? images.length : 3).map((image, i) => (
                 <Tilt
-                options={{}}
-                  key={i}
+                   key={i}
                   className={styles.image}
                  >
                   <Image src={image.imageSrc}   width={"100%"} height={"100%"} style={{objectFit:"cover"}} alt="image" />

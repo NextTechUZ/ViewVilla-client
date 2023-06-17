@@ -75,6 +75,7 @@
         background: rgba(0, 24, 90, 0.5);    transform: scaleX(0);
         transform-origin: left;
         bottom: 0;
+        max-width: unset;transition: .5s;
        }
     }
 

@@ -5,13 +5,18 @@ import Title from "../../Title";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { API_URL } from "../../../shared/constants";
+import useIntersectionObserver from "../../../utils/InterSectionObserver";
 
 function FormSection() {
   const formRef = useRef<HTMLFormElement>(null);
   const [disable, setDisable] = useState<boolean>(false);
 
+
+  const ref = useRef(null);
+  const entity = useIntersectionObserver(ref, {rootMargin:"0px 0px -200px"});
+
   return (
-    <div className={`${styles.contact} padding-block`} id="contact">
+    <div className={`${styles.contact} ${entity?.isIntersecting ? styles.visible :""} padding-block`} id="contact" ref={ref}>
       <form
         action="/"
         ref={formRef}

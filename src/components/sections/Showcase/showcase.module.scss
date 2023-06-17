@@ -1,13 +1,47 @@
 .showcase {
-  padding:calc(100px + 5vw) 7%;     
+  &.visible {
+    h1,
+    p {
+      scale: 1;
+    }
+    button{
+      translate: 0 ;
+      opacity: 1;
 
+    }
+    img {
+      transition: 1s;
+      transition-delay: 500ms;
+    }
+
+    .line {
+      scale: 1 1.3;
+    }
+    .image1 {
+      img {
+        translate: 30%;
+      }
+    }
+    .image2 {
+      img {
+        translate: -30%;
+      }
+    }
+  }
+
+  padding: calc(100px + 5vw) 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-    max-height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
-  @media (min-width:1900px) {
-    padding: 150px 0;  
+  @media (min-width: 1900px) {
+    padding: 150px 0;
+  }
+  button{
+    translate: 0 100px;
+    opacity: 0;
+    transition: 1s;
   }
   .text {
     width: 50vw;
@@ -16,6 +50,8 @@
   h1 {
     line-height: 122%;
     letter-spacing: 1px;
+    scale: 1 0;
+    transition: 700ms;
   }
 
   p {
@@ -25,29 +61,31 @@
     line-height: 200%;
     color: #626687;
     opacity: 0.75;
-    @media (max-width:600px) {
-        font-size: 14px;
-    }
-    @media (max-width:400px) {
-        font-size: 12px;
+    scale: 1 0;
+    transition: 700ms;
+    transition-delay: 500ms;
 
+    @media (max-width: 600px) {
+      font-size: 14px;
     }
-       
+    @media (max-width: 400px) {
+      font-size: 12px;
+    }
   }
   @media (max-width: 900px) {
     max-height: unset;
     flex-direction: column-reverse;
     gap: 30px;
-     .text,
+    .text,
     .images {
       width: 100%;
     }
-  } 
+  }
 }
 
 .images {
   width: 50vw;
-   .ovals {
+  .ovals {
     aspect-ratio: 5/4;
     display: flex;
     rotate: 25deg;
@@ -57,6 +95,7 @@
     width: 50%;
     aspect-ratio: 1/1;
     overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
@@ -67,16 +106,17 @@
   }
   .image2 {
     align-self: flex-start;
+
     img {
       rotate: -25deg;
-      translate: -30%;
+      translate: -100%;
     }
   }
   .image1 {
     align-self: flex-end;
 
     img {
-      translate: 30%;
+      translate: 100%;
       rotate: -25deg;
     }
   }
@@ -85,6 +125,7 @@
     width: 1px;
     height: 100%;
     transition: 1s;
-    scale: 1 1.3;
+    scale: 1 0;
+    transition: 500ms;
   }
 }

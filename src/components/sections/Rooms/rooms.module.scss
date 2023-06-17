@@ -3,34 +3,53 @@
   padding-right: 0;
   overflow: hidden;
   @media (max-width: 400px) {
-    padding-right: 7%;
-
   }
-   @media (min-width: 1840px) {
+  @media (min-width: 1840px) {
     padding-left: calc(50vw - 1600px / 2);
-
   }
-   
+  &.visible{
+    h1,.slider{
+      translate: 0;
+      opacity: 1;
+      transition: 1s;
+    }
+    .slider{
+      transform: 1.5s;
+    }
+   }
+   h1 {
+    translate: -100px;
+    opacity: 0;
+   }
 }
 .slider {
   padding: 40px 0 150px;
+  opacity: 0;
+  translate: 0 100px;
 }
 
 .imageCard {
   position: relative;
   height: 600px;
+  margin: 0 5%;
   @media (max-width: 800px) {
     height: 400px;
+    .image {
+      height: 400px !important;
+    }
   }
 
-  img {
-    height: 100%;
-    width: 90%;
+  @media (max-width: 600px) {
+    margin: 0;
+    .image {
+      width: 80vw !important;
+    }
+  }
+
+  .image {
+    height: 600px;
     object-fit: cover;
     border-radius: 30px;
-    @media (max-width: 400px) {
-      margin: 0 auto;
-    }
   }
   p {
     position: absolute;
@@ -50,14 +69,5 @@
     line-height: 150%;
     color: #0e1735;
     padding-top: 24px;
-  }
-  @media (max-width: 400px) {
-    padding: 0 5%;
-    img {
-      width: 100%;
-    }
-    p {
-      left: 10%;
-    }
   }
 }

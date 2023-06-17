@@ -26,7 +26,7 @@ function AppLayout({ children }: MainPropTypes) {
         <h1 className="bruno">ViewVilla</h1>
       </div>
     ) : (
-      <div>
+      <div className={styles.layout}>
         <Navbar />
         {children}
         <Footer />

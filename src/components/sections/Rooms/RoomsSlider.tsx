@@ -3,17 +3,15 @@ import React from "react";
 import { rooms } from "./data";
 import ImageCard from "./ImageCard";
 import styles from "./rooms.module.scss";
-import useImage from "../../../utils/useImage";
-
+ 
 function RoomsSlider() {
-  const { imageEl, onClick } = useImage();
-
+ 
   const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    
+
     slidesToScroll: 1,
     initialSlide: 0,
     className: styles.slider,
@@ -38,22 +36,22 @@ function RoomsSlider() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,    speed: 200,
-
+          slidesToShow: 1,
+          speed: 200,
         },
       },
     ],
   };
   return (
     <>
-    <Slider {...settings}>
-      {rooms.map((room) => (
-        <div key={room.id}>
-          <ImageCard {...room} onClick={()=>onClick(room.imageSrc)} />
-        </div>
-      ))}
-    </Slider>
-      {imageEl}</>
+      <Slider {...settings}>
+        {rooms.map((room) => (
+          <div key={room.id}>
+            <ImageCard {...room}   />
+          </div>
+        ))}
+      </Slider>
+     </>
   );
 }
 

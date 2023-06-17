@@ -1,17 +1,26 @@
 import Button from "../../Button";
 import Title from "../../Title";
 import styles from "./about.module.scss";
-import React from "react";
+import React, { useRef } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import image from "/public/media/qwqw4.jpeg";
-import useImage from "../../../utils/useImage";
+ import useIntersectionObserver from "../../../utils/InterSectionObserver";
+import { Image } from "antd";
 
 function About() {
-  const {imageEl,onClick} = useImage()
+ 
+  const ref = useRef(null);
+  const entity = useIntersectionObserver(ref, {rootMargin:"0px 0px -200px"});
 
   return (
-    <div className={`${styles.about}   `} id="about">
-       <div className={styles.text}>
+    <div
+      className={`${styles.about} ${
+        entity?.isIntersecting ? styles.visible : ""
+      }   `}
+      id="about"
+      ref={ref}
+    >
+      <div className={styles.text}>
         <Title type="light" size="large">
           Biz Haqimizda
         </Title>
@@ -28,11 +37,9 @@ function About() {
         </Button>
       </div>
       <div className={styles.image}>
-        <img src={image.src} alt="" onClick={()=>onClick(image.src)}/>
+        <Image src={image.src}  width={"100%"} height={"100%"} style={{objectFit:"cover"}} alt=""  />
       </div>
-      {imageEl}
-
-    </div>
+     </div>
   );
 }
 

@@ -10,10 +10,10 @@ import image1 from "/public/media/qwqw1.jpeg";
 //   return (
 //     <div className={styles.showcase  }>
 //       <div className={styles.text}>
-        // <Title size="large">
-        //   orzuyingizdagi <span>Dam</span> Olish <span>maskani</span> sizni
-        //   kutmoqda
-        // </Title>
+// <Title size="large">
+//   orzuyingizdagi <span>Dam</span> Olish <span>maskani</span> sizni
+//   kutmoqda
+// </Title>
 //         <p>
 //           Everything you need about finding your place to live will be here,
 //           where it will be easier for you
@@ -26,33 +26,38 @@ import image1 from "/public/media/qwqw1.jpeg";
 
 // export default Showcase;
 
-
-
- import React, { useRef,   } from "react"; 
+import React, { useRef } from "react";
 import Button from "../../Button";
 import { BsFillTelephoneFill } from "react-icons/bs";
- 
+import useIntersectionObserver from "../../../utils/InterSectionObserver";
+
 function Showcase() {
-   
- 
+  const ref = useRef(null);
+  const entity = useIntersectionObserver(ref, {});
+
   return (
     <div
-      className={` ${
-        styles.showcase
-      } sectionContainer`} id="home"
-     >
+      className={` ${styles.showcase} ${
+        entity?.isIntersecting ? styles.visible : ""
+      } sectionContainer`}
+      id="home"
+      ref={ref}
+    >
       {/* {products.map((item) => {
 				item.titleRu;
 			})} */}
       <div className={styles.text}>
-      <Title size="large">
+        <Title size="large">
           orzuyingizdagi <span>Dam</span> Olish <span>maskani</span> sizni
           kutmoqda
         </Title>
-        <p>Everything you need about finding your place to live will be here,
-            where it will be easier for you</p>{" "}
-            <Button  ><BsFillTelephoneFill /> Contact Now</Button>
-
+        <p>
+          Everything you need about finding your place to live will be here,
+          where it will be easier for you
+        </p>{" "}
+        <Button>
+          <BsFillTelephoneFill /> Contact Now
+        </Button>
       </div>
       <div className={styles.images}>
         <div className={styles.ovals}>
@@ -61,13 +66,12 @@ function Showcase() {
           </div>
           <div className={styles.line}></div>{" "}
           <div className={`${styles.image} ${styles.image2}`}>
-          <Image {...image1} alt="" />
+            <Image {...image1} alt="" />
           </div>
         </div>
-       </div>
+      </div>
     </div>
   );
 }
 
 export default Showcase;
- 

@@ -4,15 +4,21 @@ import styles from "./index.module.scss";
 function useImage(className?: string) {
   const [active, setActive] = useState(false);
   const [imageSrc, setImageSrc] = useState("");
-  const imageEl = (
-    <img
-      src={imageSrc}
-      className={`${className} ${styles.image}`}
-      alt=""
-      onClick={() => setActive(false)}
-      style={{ transform: `scale(${active ? 1 : 0})`, opacity: active ? 1 : 0 }}
-    />
-  );
+  const imageEl = active ? (
+    <div className={styles.container}  style={{
+          transform: `scale(${active ? 1 : 0})`,
+          opacity: active ? 1 : 0,
+        }}>
+      {" "}
+      <img
+        src={imageSrc}
+        className={`${className} ${styles.image}`}
+        alt=""
+        onClick={() => setActive(false)}
+       
+      />
+    </div>
+  ) :"";
   useEffect(() => {
     if (!active) {
       document.body.style.overflow = "auto";

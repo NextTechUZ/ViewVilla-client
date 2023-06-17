@@ -3,6 +3,22 @@
     padding: 7%;
 
     background: linear-gradient(262.94deg, #003adf 2.02%, #002384 99.65%);
+
+
+    a,p,h2{
+      scale: 0;
+      opacity: 0;
+      translate: 0 30px;
+    }
+
+    &.visible{
+      a,p,h2{
+        transition: 1s;
+        scale: 1;       opacity: 1;
+        translate: 0;
+  
+      }
+    }
 }
 
 .footer {

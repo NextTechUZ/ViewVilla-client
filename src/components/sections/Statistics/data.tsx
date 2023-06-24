@@ -11,7 +11,7 @@ export const datas = [
      }, {
         label:"2ta Yozgi Oshxona",icon:<MdSoupKitchen/>
      }, {
-        label:"10ta Kravat",icon:<FaBed/>
+        label:"8ta Kravat",icon:<FaBed/>
      }, {
         label:"11 * 5 Basseyn",icon:<FaSwimmer/>
      }, {

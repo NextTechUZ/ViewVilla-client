@@ -29,7 +29,7 @@ function Showcase() {
           kutmoqda
         </Title>
         <p>
-          Dacha keng va puxta ishlab chiqilgan interyerga ega bo'lib oilangiz va
+          Dacha keng va puxta ishlab chiqilgan interyerga ega {"bo'lib"} oilangiz va
           yaqinlaringiz uchun eng munosib joydir
         </p>{" "}
         <Button

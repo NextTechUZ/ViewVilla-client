@@ -29,16 +29,17 @@ function Showcase() {
           kutmoqda
         </Title>
         <p>
-        Dacha keng va puxta ishlab chiqilgan interyerga ega bo'lib oilangiz va yaqinlaringiz uchun eng munosib joydir
-
+          Dacha keng va puxta ishlab chiqilgan interyerga ega bo'lib oilangiz va
+          yaqinlaringiz uchun eng munosib joydir
         </p>{" "}
- 
-        <Button onClick={()=> {
-          document.getElementById("statistics")?.scrollIntoView({})
-        }}>
-        Biz Haqimizda
+        <Button
+          onClick={() => {
+            document.getElementById("statistics")?.scrollIntoView({});
+          }}
+        >
+          Biz Haqimizda
         </Button>
-       </div>
+      </div>
       <div className={styles.images}>
         <div className={styles.ovals}>
           <div className={`${styles.image} ${styles.image1}`}>

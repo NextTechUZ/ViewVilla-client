@@ -8,6 +8,7 @@ import image6 from "/public/media/r6.jpg";
 import image7 from "/public/media/r7.jpg";
 import image8 from "/public/media/r8.jpg";
 import image9 from "/public/media/r9.jpg";
+import image10 from "/public/media/r10.jpg";
  
 
 export const rooms = [
@@ -20,4 +21,5 @@ export const rooms = [
   { id: "7",size:"120 x 60", name: "2-chi yotoqxona", icon: <FaAccusoft />, imageSrc: image7.src },
   { id: "8",size:"120 x 60", name: "3-chi yotoqxona", icon: <FaAccusoft />, imageSrc: image8.src },
   { id: "9",size:"120 x 60", name: "Ovqatlanish xonasi", icon: <FaAccusoft />, imageSrc: image9.src },
+  { id: "10",size:"120 x 60", name: "Terassaning ko'rinishi", icon: <FaAccusoft />, imageSrc: image10.src },
   ];

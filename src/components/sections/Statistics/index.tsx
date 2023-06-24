@@ -61,8 +61,8 @@ function Statistics() {
             Sayohat qiling va <span>Villamizdan</span> Roxatlaning
           </Title>
           <p>
-            Villamiz Jahon boyicha barcha standartlarga javob beradi. Zamonaviy
-            qulay va barcha sharoitlarga ega
+            Villamiz barcha standartlarga javob beradi. Zamonaviy
+            qulay va barcha sharoitlarga ega!
           </p>
           <h3>Villa ma’lumotlari</h3>
           <div className={styles.datas}>

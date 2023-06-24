@@ -2,8 +2,8 @@ import Image from "next/image";
 import Title from "../../Title";
 import styles from "./showcase.module.scss";
 // import React from "react";
-import image from "/public/media/a1.jpg";
-import image1 from "/public/media/a2.jpg";
+import image from "/public/media/g26.jpg";
+import image1 from "/public/media/g6.jpg";
 
 import React, { useRef } from "react";
 import Button from "../../Button";

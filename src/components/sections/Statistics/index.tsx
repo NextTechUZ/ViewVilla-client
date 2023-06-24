@@ -1,15 +1,16 @@
 import React, { useRef } from "react";
 import styles from "./about.module.scss";
 import Title from "../../Title";
-import mainImage from "/public/media/1212qw.jpeg";
-import image1 from "/public/media/qwqw7.jpeg";
-import image2 from "/public/media/qwqw13.jpeg";
-import image3 from "/public/media/qwqw12.png";
+import mainImage from "/public/media/b1.jpg";
+import image1 from "/public/media/b2.jpg";
+import image2 from "/public/media/b3.jpg";
+import image3 from "/public/media/b4.jpg";
 import { datas } from "./data";
 import Button from "../../Button";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import useIntersectionObserver from "../../../utils/InterSectionObserver";
 import Tilt from "../../../utils/Tilt";
+import Link from "next/link";
  
 
 
@@ -71,9 +72,12 @@ function Statistics() {
               </p>
             ))}
           </div>
+          <Link href="tel:998976750555">
+
           <Button type="light" style={{ borderRadius: 100 }}>
             <BsFillTelephoneFill /> Contact Now
           </Button>
+          </Link>
         </div>
       </div>
     </div>

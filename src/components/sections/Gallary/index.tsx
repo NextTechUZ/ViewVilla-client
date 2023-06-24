@@ -23,11 +23,12 @@ function Gallary() {
         </Title>
         <div className={styles.imageContainer}>
           {images.slice(0, active ? images.length : 1).map((images, i) => (
-            <div className={styles.images} key={i}>
+            <div className={styles.images}  key={i}>
               {images.slice(0, active ? images.length : 3).map((image, i) => (
                 <Tilt
                    key={i}
                   className={styles.image}
+                  options={{max:5, "max-glare":            1,}}
                  >
                   <Image src={image.imageSrc}   width={"100%"} height={"100%"} style={{objectFit:"cover"}} alt="image" />
                 </Tilt>
@@ -42,7 +43,7 @@ function Gallary() {
             setActive(!active);
           }}
         >
-          {active ? "See Less" : "See More"} <AiOutlineArrowRight />
+          {active ? "Kamroq ko'rish" : "Ko'proq ko'rish"} <AiOutlineArrowRight />
         </Button>
       </div>
      </div>

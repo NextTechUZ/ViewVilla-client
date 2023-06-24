@@ -26,21 +26,15 @@ function Footer() {
             </a>
           </Link>
           <p>
-            We provide information about properties such as houses, villas and
-            apartments to help people find their dream home
-          </p>
+Biz bilan quyidagi ijtimoiy tarmoqlar orqali aloqaga chiqishingiz mumkin          </p>
           <div className={styles.icons}>
-            <Link href="">
-              <a>
-                <FaFacebookF />
-              </a>
-            </Link>{" "}
-            <Link href="">
+             
+            <Link href="https://t.me/pilot_markk">
               <a>
                 <FaTelegramPlane />
               </a>
             </Link>{" "}
-            <Link href="">
+            <Link href="https://www.instagram.com/viewvilla_sijjak/">
               <a>
                 <RiInstagramFill />
               </a>
@@ -48,27 +42,31 @@ function Footer() {
           </div>
         </div>
         <div className={styles.row}>
-          <h2 className="bruno">Property</h2>
-          <Link href="">
-            <a> House</a>
+          <h2 className="bruno">Kategoriyalar</h2>
+          <Link href="#about">
+            <a>Dacha Haqida</a>
           </Link>{" "}
-          <Link href="">
-            <a> Apartment</a>
+          <Link href="#gallary">
+            <a> Galareya </a>
           </Link>{" "}
-          <Link href="">
-            <a> Villa</a>
+          <Link href="#rooms">
+            <a> Xonalar</a>
           </Link>
         </div>{" "}
         <div className={styles.row}>
-          <h2 className="bruno">Contact</h2>
-          <Link href="">
-            <a> 2464 Royal Ln. Mesa, New Jersey 45463</a>
+          <h2 className="bruno">Kontaktlar</h2>
+ 
+          <Link href="tel:976750555">
+            <a> +998 (97) 675-05-55</a>
           </Link>{" "}
-          <Link href="">
-            <a> (671) 555-0110</a>
+          <Link href="tel:998472888">
+            <a> +998 (99) 847-28-88</a>
           </Link>{" "}
-          <Link href="">
-            <a> info@hounter.com</a>
+          <Link href="tel:970710021">
+            <a> +998 (97) 071-00-21</a>
+          </Link>{" "}
+          <Link href="mailto:Viewvilla21@gmail.com">
+            <a> Viewvilla21@gmail.com</a>
           </Link>
         </div>
       </div>

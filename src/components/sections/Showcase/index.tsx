@@ -2,34 +2,14 @@ import Image from "next/image";
 import Title from "../../Title";
 import styles from "./showcase.module.scss";
 // import React from "react";
-import image1 from "/public/media/20230616_194336.jpg";
-import image from "/public/media/20230616_175425.jpg";
-// import Image from "next/image";
-
-// function Showcase() {
-//   return (
-//     <div className={styles.showcase  }>
-//       <div className={styles.text}>
-// <Title size="large">
-//   orzuyingizdagi <span>Dam</span> Olish <span>maskani</span> sizni
-//   kutmoqda
-// </Title>
-//         <p>
-//           Everything you need about finding your place to live will be here,
-//           where it will be easier for you
-//         </p>
-//       </div>
-//       <Image {...image} alt="logo image" className={styles.image} />{" "}
-//     </div>
-//   );
-// }
-
-// export default Showcase;
+import image from "/public/media/a1.jpg";
+import image1 from "/public/media/a2.jpg";
 
 import React, { useRef } from "react";
 import Button from "../../Button";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import useIntersectionObserver from "../../../utils/InterSectionObserver";
+import Link from "next/link";
 
 function Showcase() {
   const ref = useRef(null);
@@ -43,22 +23,22 @@ function Showcase() {
       id="home"
       ref={ref}
     >
-      {/* {products.map((item) => {
-				item.titleRu;
-			})} */}
       <div className={styles.text}>
         <Title size="large">
           orzuyingizdagi <span>Dam</span> Olish <span>maskani</span> sizni
           kutmoqda
         </Title>
         <p>
-          Everything you need about finding your place to live will be here,
-          where it will be easier for you
+        Dacha keng va puxta ishlab chiqilgan interyerga ega bo'lib oilangiz va yaqinlaringiz uchun eng munosib joydir
+
         </p>{" "}
-        <Button>
-          <BsFillTelephoneFill /> Contact Now
+ 
+        <Button onClick={()=> {
+          document.getElementById("statistics")?.scrollIntoView({})
+        }}>
+        Biz Haqimizda
         </Button>
-      </div>
+       </div>
       <div className={styles.images}>
         <div className={styles.ovals}>
           <div className={`${styles.image} ${styles.image1}`}>

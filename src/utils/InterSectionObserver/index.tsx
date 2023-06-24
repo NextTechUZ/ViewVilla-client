@@ -26,9 +26,9 @@ function useIntersectionObserver(
 
     const observerParams = { threshold, root, rootMargin };
     const observer = new IntersectionObserver(([entry]: IntersectionObserverEntry[]): void => {
-    if (entry.isIntersecting) {
-      observer.unobserve(entry.target)
-    }
+    // if (entry.isIntersecting) {
+    //   // observer.unobserve(entry.target)
+    // }
    
       setEntry(entry);
     }

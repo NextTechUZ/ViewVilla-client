@@ -10,13 +10,18 @@ function HomePage() {
   return (
     <div  >
       <Showcase/>
-      <Statistics/>
-      <Rooms/>
+    <Statistics/>
+        <Rooms/>
       <About/>
       <Gallary/>
-      <FormSection/>
+      <FormSection/>   
     </div>
   )
+}
+export async function getStaticProps() {
+   return {
+   
+  };
 }
 
 export default HomePage

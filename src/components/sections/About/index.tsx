@@ -3,9 +3,10 @@ import Title from "../../Title";
 import styles from "./about.module.scss";
 import React, { useRef } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import image from "/public/media/qwqw4.jpeg";
+import image from "/public/media/d2.jpg";
  import useIntersectionObserver from "../../../utils/InterSectionObserver";
 import { Image } from "antd";
+import Link from "next/link";
 
 function About() {
  
@@ -25,16 +26,16 @@ function About() {
           Biz Haqimizda
         </Title>
         <p>
-          Fusce justo mi, vehicula id arcu et, dapibus tristique lectus. Vivamus
-          a elit sodales, tincidunt nunc non, maximus lacus. Fusce a augue sed
-          dolor auctor iaculis vitae id mauris. Integer ut lectus non neque
-          suscipit luctus. Mauris et erat id ipsum condimentum cursus. Sed
-          tempus enim non massa mattis iaculis. In quis massa risus
-        </p>
+        Dachamizda Oilangiz uchun З Спальни+Зал, Летний бассейн 11×5м, Кухня (йопик, 2та очик), Playstation 4, Санузел, Теннис, Барбекю и Мангал+тандер, Беседка, Тапчан, Телевизор, Кондиционер, Кондиционер, Красивая природа+Терраса. Dacha hudida spirtli ichmliklar istemoli taqiqlangan        </p>
+        <Link href="https://www.instagram.com/viewvilla_sijjak/" target="_blank">
+          <a target="_blank" >
+
         <Button type="light">
-          Learn More
+    Batafsil
           <AiOutlineArrowRight />
         </Button>
+          </a>
+        </Link>
       </div>
       <div className={styles.image}>
         <Image src={image.src}  width={"100%"} height={"100%"} style={{objectFit:"cover"}} alt=""  />

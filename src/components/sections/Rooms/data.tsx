@@ -13,7 +13,7 @@ import image9 from "/public/media/r9.jpg";
 export const rooms = [
   { id: "1",size:"120 x 60", name: "Oshxona", icon: <FaAccusoft />, imageSrc: image1.src },
   { id: "2",size:"120 x 60", name: "Basseyn", icon: <FaAccusoft />, imageSrc: image2.src },
-  { id: "3",size:"120 x 60", name: "Tapchan", icon: <FaAccusoft />, imageSrc: image3.src },
+  { id: "3",size:"120 x 60", name: "Ochiq ovqatlanish joyi va Tapchan", icon: <FaAccusoft />, imageSrc: image3.src },
   { id: "4",size:"120 x 60", name: "Zal", icon: <FaAccusoft />, imageSrc: image4.src },
   { id: "5",size:"120 x 60", name: "Hojatxona", icon: <FaAccusoft />, imageSrc: image5.src },
   { id: "6",size:"120 x 60", name: "1-chi yotoqxona", icon: <FaAccusoft />, imageSrc: image6.src },

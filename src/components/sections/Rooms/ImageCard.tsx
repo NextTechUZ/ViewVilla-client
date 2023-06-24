@@ -22,10 +22,7 @@ function ImageCard({
         className={styles.image}
       
       /> 
-      <p>
-        <GiPencilRuler size={23} />
-        {size}
-      </p>
+      
       <h3>{name}</h3>
     </div>
   );

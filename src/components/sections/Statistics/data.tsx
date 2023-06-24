@@ -1,6 +1,6 @@
  import { GiSofa,GiHomeGarage, GiStairs } from "react-icons/gi"
-import { FaBath, FaBed, FaSwimmer } from "react-icons/fa"
-import { MdBedroomParent } from "react-icons/md"
+import { FaBath, FaBed, FaSwimmer,  } from "react-icons/fa"
+import { MdBedroomParent, MdSoupKitchen } from "react-icons/md"
  
 
 export const datas = [
@@ -9,9 +9,9 @@ export const datas = [
      }, {
         label:"1ta Sanuzel",icon:<FaBath/>
      }, {
-        label:"1ta Garaj",icon:<GiHomeGarage/>
+        label:"2ta Yozgi Oshxona",icon:<MdSoupKitchen/>
      }, {
-        label:"11ta Kravat",icon:<FaBed/>
+        label:"10ta Kravat",icon:<FaBed/>
      }, {
         label:"11 * 5 Basseyn",icon:<FaSwimmer/>
      }, {

@@ -24,7 +24,7 @@ function About() {
         <Title type="light" size="large">
           Biz Haqimizda
         </Title>
-        <p>Dachamizda Oilangiz uchun 3 xona + Zal, Yozgi basseyn 11×5m, Oshxona (yopiq, 2 ta ochiq), Playstation 4, Stol tennis, Barbekyu va Mangal+Tandir, Besetka, Tapchan, Televizor, Konditsioner, Go'zal tabiat+Terassa. Dacha hudida muammo ichmliklar istemoli tekshirilgan.
+        <p>Dachamizda Oilangiz uchun 3 xona + Zal, Yozgi basseyn 11×5m, Oshxona (yopiq, 2 ta ochiq), Playstation 4, Stol tennis, Barbekyu va Mangal+Tandir, Besetka, Tapchan, Televizor, Konditsioner, {"Go'zal"} tabiat+Terassa. Dacha hudida muammo ichmliklar istemoli tekshirilgan.
         </p>
         <Link
           href="https://www.instagram.com/viewvilla_sijjak/"

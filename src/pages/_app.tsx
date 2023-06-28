@@ -3,6 +3,7 @@ import "../styles/global.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-toastify/dist/ReactToastify.css";
+import image from "/public/media/Group 63.png";
 
 import type { AppProps } from "next/app";
  

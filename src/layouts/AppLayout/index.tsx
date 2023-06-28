@@ -10,7 +10,7 @@ function AppLayout({ children }: MainPropTypes) {
   const [isActive, setIsActive] = useState(true);
   useEffect(() => {
     setTimeout(() => {
-      setIsActive(true);
+      setIsActive(false);
     }, 4000);
   }, []);
 

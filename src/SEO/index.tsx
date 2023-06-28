@@ -1,11 +1,14 @@
 import Head from "next/head";
 import React from "react";
 import image from "/public/media/Group 63.png";
+import mainImage from "/public/media/b1.jpg";
+import { NextSeo } from "next-seo";
+
 function SEO() {
   return (
     <Head>
       <title>ViewVilla</title>
-      <link rel="icon" type="image/png" href={image.src} />
+  <link rel="icon" type="image/png" href={image.src} />
 
       <meta
         name="description"
@@ -18,14 +21,26 @@ function SEO() {
         content="viewvilla vewvilla view-villa viewvillauz viewvilla.uz dacha dachauz dacha.uz sijje sijjak tog villa  luxury villas, vacation homes, villa rentals, exquisite villas, luxury vacation rentals, villa accommodations, premium villas, luxurious retreats, stunning views, top-notch amenities, dream vacations"
       />
 
-      <meta property="og:title" content="ViewVilla" />
-      <meta
-        property="og:description"
-        content="Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!"
+      <NextSeo
+        title="ViewVilla"
+        description="Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!"
+        openGraph={{
+          title: "ViewVilla",
+          description:
+            "Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!",
+          images: [
+            {
+              url: mainImage.src,
+              alt: "ViewVilla: seo image",
+            },
+          ],
+          locale: "uz-Uz"
+        }}
       />
-      <meta property="og:image" content={image.src} />
-      <meta property="og:url" content="https://www.viewvilla.uz/" />
-      <meta property="og:type" content="website" />
+
+
+    
+ 
     </Head>
   );
 }

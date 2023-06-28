@@ -16,7 +16,9 @@ function SEO() {
       <meta
         name="keywords"
         content="viewvilla vewvilla view-villa viewvillauz viewvilla.uz dacha dachauz dacha.uz sijje sijjak tog villa  luxury villas, vacation homes, villa rentals, exquisite villas, luxury vacation rentals, villa accommodations, premium villas, luxurious retreats, stunning views, top-notch amenities, dream vacations"
-      />
+      />https://www.viewvilla.uz/
+
+      
     </Head>
   );
 }

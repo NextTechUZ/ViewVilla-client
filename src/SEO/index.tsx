@@ -21,6 +21,8 @@ function SEO() {
         content="viewvilla vewvilla view-villa viewvillauz viewvilla.uz dacha dachauz dacha.uz sijje sijjak tog villa  luxury villas, vacation homes, villa rentals, exquisite villas, luxury vacation rentals, villa accommodations, premium villas, luxurious retreats, stunning views, top-notch amenities, dream vacations"
       />
 
+<meta name="google-site-verification" content="1v7glY_hKK9voGf0gtY3VFInBqFisba9M8LTPiQ0-2A" />
+
       <NextSeo
         title="ViewVilla"
         description="Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!"

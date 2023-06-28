@@ -8,7 +8,7 @@ function SEO() {
   return (
     <Head>
       <title>ViewVilla</title>
-  <link rel="icon" type="image/png" href={image.src} />
+      <link rel="icon" type="image/png" href={image.src} />
 
       <meta
         name="description"
@@ -21,7 +21,22 @@ function SEO() {
         content="viewvilla vewvilla view-villa viewvillauz viewvilla.uz dacha dachauz dacha.uz sijje sijjak tog villa  luxury villas, vacation homes, villa rentals, exquisite villas, luxury vacation rentals, villa accommodations, premium villas, luxurious retreats, stunning views, top-notch amenities, dream vacations"
       />
 
-<meta name="google-site-verification" content="1v7glY_hKK9voGf0gtY3VFInBqFisba9M8LTPiQ0-2A" />
+      <meta
+        name="google-site-verification"
+        content="1v7glY_hKK9voGf0gtY3VFInBqFisba9M8LTPiQ0-2A"
+      />
+
+      <meta property="og:title" content="ViewVilla" />
+      <meta
+        property="og:description"
+        content="Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!
+        
+        Experience luxury and relaxation at our stunning villas. Rent our exquisite vacation homes with top-notch amenities and breathtaking views. Book your dream villa today!"
+      />
+      <meta property="og:image" itemProp="image" content={mainImage.src} />
+      <meta property="og:image:type" content="image/jpg" />
+      <meta property="og:url" content="https://www.viewvilla.uz" />
+      <meta property="og:type" content="website" />
 
       <NextSeo
         title="ViewVilla"
@@ -36,13 +51,9 @@ function SEO() {
               alt: "ViewVilla: seo image",
             },
           ],
-          locale: "uz-Uz"
+          locale: "uz-Uz",
         }}
       />
-
-
-    
- 
     </Head>
   );
 }

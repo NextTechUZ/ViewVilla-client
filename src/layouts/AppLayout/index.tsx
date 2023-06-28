@@ -10,30 +10,36 @@ function AppLayout({ children }: MainPropTypes) {
   const [isActive, setIsActive] = useState(true);
   useEffect(() => {
     setTimeout(() => {
-      // setIsActive(false);
+      setIsActive(true);
     }, 4000);
   }, []);
 
-  return <>
-        <SEO />
+  return (
+    <>
+      <SEO />
 
-  {
-    isActive ? (
-      <div className={styles.video}>
-        <video autoPlay muted controls src="/media/logo.mp4"   />
+      {isActive ? (
+        <div className={styles.video}>
+          <video
+            src="/media/logo.mp4"
+            autoPlay
+            muted
+            playsInline
+             
+          ></video>
 
-         <h1 className="bruno">ViewVilla</h1>
-      </div>
-    ) : (
-      <div className={styles.layout}>
-        <Navbar />
-        {children}
-        <Footer />
-        <ToastContainer />
-      </div>)
-  }
-  </>
- 
+          <h1 className="bruno">ViewVilla</h1>
+        </div>
+      ) : (
+        <div className={styles.layout}>
+          <Navbar />
+          {children}
+          <Footer />
+          <ToastContainer />
+        </div>
+      )}
+    </>
+  );
 }
 
 export default AppLayout;

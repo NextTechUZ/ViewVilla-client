@@ -10,7 +10,7 @@ function AppLayout({ children }: MainPropTypes) {
   const [isActive, setIsActive] = useState(true);
   useEffect(() => {
     setTimeout(() => {
-      setIsActive(false);
+      // setIsActive(false);
     }, 4000);
   }, []);
 
@@ -20,7 +20,7 @@ function AppLayout({ children }: MainPropTypes) {
   {
     isActive ? (
       <div className={styles.video}>
-        <video autoPlay muted playsInline>
+        <video autoPlay muted  >
           <source src="/media/logo.mp4" type="video/mp4" />
         </video>
         <h1 className="bruno">ViewVilla</h1>

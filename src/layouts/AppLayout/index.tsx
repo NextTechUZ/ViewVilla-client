@@ -20,10 +20,9 @@ function AppLayout({ children }: MainPropTypes) {
   {
     isActive ? (
       <div className={styles.video}>
-        <video autoPlay muted  >
-          <source src="/media/logo.mp4" type="video/mp4" />
-        </video>
-        <h1 className="bruno">ViewVilla</h1>
+        <video autoPlay muted controls src="/media/logo.mp4"   />
+
+         <h1 className="bruno">ViewVilla</h1>
       </div>
     ) : (
       <div className={styles.layout}>

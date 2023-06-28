@@ -1,6 +1,7 @@
-.layout{
+.layout {
   overflow: hidden;
-}.video {
+}
+.video {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -10,7 +11,7 @@
   animation: container 1s linear 3s 1 forwards;
   video {
     max-width: 600px;
-    width: 100%; 
+    width: 100%;
   }
 
   h1 {

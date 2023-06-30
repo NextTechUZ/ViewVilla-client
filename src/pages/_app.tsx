@@ -1,8 +1,9 @@
 import AppLayout from "../layouts/AppLayout";
-import "../styles/global.scss";
+import 'antd/dist/antd.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-toastify/dist/ReactToastify.css";
+import "../styles/global.scss";
 
 import type { AppProps } from "next/app";
  

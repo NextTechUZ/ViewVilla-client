@@ -26,7 +26,7 @@ function SEO() {
         content="1v7glY_hKK9voGf0gtY3VFInBqFisba9M8LTPiQ0-2A"
       />
 
-      <meta property="og:title" content="ViewVilla" />
+      {/* <meta property="og:title" content="ViewVilla" />
       <meta
         property="og:description"
         content="Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!
@@ -36,15 +36,15 @@ function SEO() {
       <meta property="og:image" itemProp="image" content={mainImage.src} />
       <meta property="og:image:type" content="image/jpg" />
       <meta property="og:url" content="https://www.viewvilla.uz" />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content="website" /> */}
 
       <NextSeo
         title="ViewVilla"
-        description="Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!"
+        description="Bizning ajoyib dachalarimzda hashamatli dam oling."
         openGraph={{
           title: "ViewVilla",
           description:
-            "Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!",
+            "Bizning ajoyib dachalarimzda hashamatli dam oling.",
           images: [
             {
               url: mainImage.src,

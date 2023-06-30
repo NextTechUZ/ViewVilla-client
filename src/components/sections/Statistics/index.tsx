@@ -61,7 +61,7 @@ function Statistics() {
             Sayohat qiling va <span>Villamizdan</span> Roxatlaning
           </Title>
           <p>
-            Villamiz barcha standartlarga javob beradi. Zamonaviy
+            Villamiz <b>10 kishilik</b> bo'lib, zamonaviy
             qulay va barcha sharoitlarga ega!
           </p>
           <h3>Villa ma’lumotlari</h3>

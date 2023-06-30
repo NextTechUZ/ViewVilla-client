@@ -12,9 +12,7 @@ function SEO() {
 
       <meta
         name="description"
-        content="Bizning ajoyib dachalarimzda hashamatli dam oling. Yuqori darajadagi qulayliklari va hayratlanarli manzaralari bilan bizning ajoyib dachamizni ijaraga oling. Hoziroq orzuingizdagi dachani bron qiling!
-
-        Experience luxury and relaxation at our stunning villas. Rent our exquisite vacation homes with top-notch amenities and breathtaking views. Book your dream villa today!"
+        content="Bizning ajoyib dachalarimzda hashamatli dam oling"
       />
       <meta
         name="keywords"
